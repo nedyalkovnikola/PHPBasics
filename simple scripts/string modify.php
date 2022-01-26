@@ -3,10 +3,11 @@
 <link href="style.css" rel="stylesheet">
 <body>
 
-
 <?php
-// Homework: PHP Flow Control Loops. 
-// Problem 6.	Modify String
+/* The script receives a string from an input form and modifies it according to the selected option (radio button). 
+It supports the following operations: palindrome check, reverse string, split to extract leters only, 
+hash the string with the default PHP hashing algorithm, shuffle the string characters randomly.  */
+
 
 $name = $modify = $result = "";
 
