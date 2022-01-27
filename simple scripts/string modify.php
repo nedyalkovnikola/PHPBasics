@@ -30,6 +30,9 @@ if (!empty($modify)) {
             $arr = str_split($name);
             $result = implode(" ", $arr);
             break;
+        case 'Hash':
+            $result = hash('ripemd160', $name);
+            break; 
         case 'Shuffle':
             $result = str_shuffle($name);
             break;
@@ -43,13 +46,14 @@ if (!empty($modify)) {
 <form method="get" action="<?php $_SERVER['PHP_SELF'];?>" >
     <div>
         <div class="io">Input / Output</div>
-        <span><input type="text" name="name"><span class="result"><?php echo $result ?></span></span>
+        <input type="text" name="name">
         <input type="radio" name="modify" value="Palindrome">Check palindrome
         <input type="radio" name="modify" value="Reverse">Reverse string
         <input type="radio" name="modify" value="Split">Split
         <input type="radio" name="modify" value="Hash">Hash string
         <input type="radio" name="modify" value="Shuffle">Shuffle string
         <input type="submit" name="submit"  value="Submit">
+        <div><span class="result"><?php echo $result ?></span></div>
     </div>
 </form>
 

@@ -9,9 +9,8 @@ form {
 
 .result {
     position: relative;
-    top: 26px;
-    left: -45px;
-    color: red;
+    margin-left: 70px;
+    color: green;
 }
 
 .io {
