@@ -8,22 +8,32 @@ A small game where two players fight with each other.
 - Game is over when one of the players drops to 0 or less health 
 */
 
-/* Player properties:
-    - ID (unique number)
-    - Name
-    - Health
-    - Attack
-    
-    Methods:
-    - Constructor (Name, Health, Attack)
-    - Attack (another player)
-    - Reduce Life (Health)
-    - Display Player's Attack ()
-    - Alive or dead? ()
+require_once 'Player.php';
+require_once 'Battle.php';
+?>
 
-*/
+<form>
+    Player One: <input type="text" name="player_one_name"><br/>
+    Player Two: <input type="text" name="player_two_name"><br/>
+    <input type="submit" name="start" value="Start Battle">
+</form>
 
+<?php
+    if(isset($_GET['start'])) {
+        $nameOne = $_GET['player_one_name'];
+        $nameTwo = $_GET['player_two_name'];
 
+        $player1 = new Player($nameOne);
+        $player2 = new Player($nameTwo);
 
+        $battle = new Battle($player1, $player2);
+        $battle->start();
+
+        if ($battle->getResult() === null) {
+            echo "DRAW BATTLE";
+        } else {
+            echo "THE WINNER IS: " . $battle->getResult()->getName();
+        }
+    }
 
 ?>
