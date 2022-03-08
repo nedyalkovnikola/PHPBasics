@@ -77,5 +77,3 @@ class Question
         $this->answers[] = $answer;
     }
 }
-
-?>

@@ -16,5 +16,3 @@ require_once 'Content/Answer.php';
 
 $forum = new Forum();
 $forum->start();
-
-?>
