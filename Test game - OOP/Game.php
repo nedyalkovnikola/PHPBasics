@@ -1,6 +1,6 @@
 <?php
 
-class Battle 
+class Game 
 {
     const ROUNDS = 10;
 
@@ -42,5 +42,3 @@ class Battle
         return $winner;
     }
 }
-
-?>

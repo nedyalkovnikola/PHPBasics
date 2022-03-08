@@ -9,7 +9,7 @@ A small game where two players fight with each other.
 */
 
 require_once 'Player.php';
-require_once 'Battle.php';
+require_once 'Game.php';
 ?>
 
 <form>
@@ -26,7 +26,7 @@ require_once 'Battle.php';
         $player1 = new Player($nameOne);
         $player2 = new Player($nameTwo);
 
-        $battle = new Battle($player1, $player2);
+        $battle = new Game($player1, $player2);
         $battle->start();
 
         if ($battle->getResult() === null) {
@@ -35,5 +35,4 @@ require_once 'Battle.php';
             echo "THE WINNER IS: " . $battle->getResult()->getName();
         }
     }
-
 ?>
