@@ -106,7 +106,7 @@ abstract class BaseShip implements ShipInterface
      */
     public function setHealth(int $value)
     {
-        $this->health = $value;
+        $this->health = max(0, $value);
     }
 
     /**
@@ -122,7 +122,7 @@ abstract class BaseShip implements ShipInterface
      */
     public function setShields(int $value)
     {
-        $this->shields = $value;
+        $this->shields = max(0, $value);
     }
 
     /**
@@ -138,7 +138,7 @@ abstract class BaseShip implements ShipInterface
      */
     public function setFuel(int $value)
     {
-        $this->fuel = $value;
+        $this->fuel = max(0, $value);
     }
 
     /**

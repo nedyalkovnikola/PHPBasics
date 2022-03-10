@@ -13,7 +13,6 @@ class ArtilleryGun extends BaseProjectile
     public function doDamage(ShipInterface $targetShip)
     {
         $newHealth = $targetShip->getHealth() - $this->getDamage();
-        $newHealth = max(0, $newHealth);
         $targetShip->setHealth($newHealth);
     }
 }
