@@ -205,14 +205,15 @@ abstract class BaseShip implements ShipInterface
             if (count($this->enhancements) == 0) {
                 $output[] = "Enhancements: N/A";
             } else {
-                $output = "Enhancements: " . implode(", ", array_keys($this->enhancements));
+                $output[] = "Enhancements: " . implode(", ", array_keys($this->enhancements));
             }
 
-            if ($this->type == 'Galleon') {
+            if ($this->type === 'Galleon') {
                 $output[] = "-Projectiles fired: {$this->projectilesFired}";
             }
         }
 
         return $output;
     }
+
 }
