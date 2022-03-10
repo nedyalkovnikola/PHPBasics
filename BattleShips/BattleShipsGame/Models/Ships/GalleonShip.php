@@ -29,4 +29,12 @@ class GalleonShip extends BaseShip
     {
         return $this->getDamage();
     }
+
+    public function getReport(): array
+    {
+        $output = parent::getReport();
+        $output[] = "-Projectiles fired: {$this->projectilesFired}";
+
+        return $output;
+    }
 }
