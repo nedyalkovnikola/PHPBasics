@@ -34,18 +34,14 @@ class GameEngine implements GameEngineInterface
 
     public function run()
     {
-        
-            $this->produceCommands();
-            $this->readInput();
-        
-/*         try {
+        try {
             $this->produceCommands();
             $this->readInput();
         } catch (GameException $gameException) {
             $this->io->writeLine($gameException->getMessage());
         } catch (\Exception $e) {
             $this->io->writeLine($e->getMessage());
-        } */
+        }
     }
 
     /**
