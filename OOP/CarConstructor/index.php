@@ -1,4 +1,5 @@
 <?php
+require_once 'Car.php';
 
 $input = trim(fgets(STDIN));
 $carInfo = explode(" ", $input);
