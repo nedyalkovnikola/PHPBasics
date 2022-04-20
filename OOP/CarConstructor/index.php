@@ -9,6 +9,3 @@ if ($carInfo[0] != 'car') {
     echo "Car created. You can now travel safely" . PHP_EOL;
     $car->start();
 }
-
-
-?>
